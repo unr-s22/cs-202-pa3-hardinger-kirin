@@ -3,7 +3,7 @@
 #include "Account.h"
 
 int main() {
-    int a = 323;
+    int a = 300;
     int b = 23;
     Money m(a, b); 
     int c = 200;
@@ -62,15 +62,11 @@ int main() {
     } else if(three != four) {
         std::cout << "Three is NOT equal to four" << std::endl;
     } else {
-        std::cout << "ERROR three is not equal to five and is somehow equal to four" << std::endl;
+        std::cout << "ERROR three is not equal to five and equal to four" << std::endl;
     }
 
     //tests std::cout <<
     std::cout << "One is worth " << one << std::endl;
-    std::cout << "Two is worth " << two << std::endl;
-    std::cout << "Three is worth " << three << std::endl;
-    std::cout << "Four is worth " << four << std::endl;
-    std::cout << "Five is worth " << five << std::endl;    
 
     return 0;
 }
