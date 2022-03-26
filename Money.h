@@ -12,7 +12,7 @@ public:
     Money(int dollars, int cents);
 
     //default constructor
-    Money();
+    Money(){}
 
     //overload + operator
     Money operator + (const Money& other);

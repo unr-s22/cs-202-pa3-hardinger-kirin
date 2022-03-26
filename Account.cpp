@@ -6,7 +6,8 @@ Account::Account(Money m){
     bool updateBalFlag = false;    
     balance = m;
 }
- 
+Account::Account(){}
+
 void Account::makeDeposit(Money m){
     Deposits.push_back(m);
     updateBalFlag = true;
@@ -24,11 +25,11 @@ std::ostream& operator << (std::ostream& out, const Account& account) {
             nbalance = nbalance + account.Deposits[j];
         }
         for(int j = 0; j < account.WithDrawals.size(); j++){
-            nbalance = nbalance + account.WithDrawals[j];
+            nbalance = nbalance - account.WithDrawals[j];
         }
         out << "Account Details" << std::endl;
         out << "--------------------------" << std::endl;
-        out << "Current Balance:" << account.balance << std::endl;
+        out << "Current Balance:" << nbalance << std::endl;
         out << "-------------------------" << std::endl;
         out << "Number of Deposits: " << account.Deposits.size() << std::endl;
         out << "--------------------" << std::endl;
